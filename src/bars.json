@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Chocolate Bar - A",
+    "weight": 200,
+    "company": "A",
+    "ratings": 5
+  },
+  {
+    "id": 2,
+    "name": "Chocolate Bar - B",
+    "weight": 200,
+    "company": "B",
+    "ratings": 2
+  },
+  {
+    "id": 3,
+    "name": "Chocolate Bar - C",
+    "weight": 200,
+    "company": "C",
+    "ratings": 3
+  },
+  {
+    "id": 4,
+    "name": "Chocolate Bar - D",
+    "weight": 200,
+    "company": "D",
+    "ratings": 1
+  },
+  {
+    "id": 5,
+    "name": "Chocolate Bar - E",
+    "weight": 200,
+    "company": "E",
+    "ratings": 4
+  }
+]
