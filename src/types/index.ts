@@ -3,7 +3,11 @@ export interface IBar {
   name: string;
   weight: number;
   company: string;
-  ratings: number;
+  price: number;
+  quantity: number;
+  pricesOfBarPacketBox: Array<number>;
+  quantitiesOfBarPacketBox: Array<number>;
+
 }
 
 export interface IResource {

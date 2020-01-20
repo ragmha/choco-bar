@@ -9,7 +9,7 @@ describe('GET /', () => {
     const response = await request.get('/');
     expect(response.type).toBe('application/json');
     expect(response.status).toBe(200);
-    expect(response.body).toHaveLength(5);
+    expect(response.body).toHaveLength(1);
     done();
   });
 });
