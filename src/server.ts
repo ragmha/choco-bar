@@ -1,12 +1,15 @@
+import bodyParser from 'body-parser';
+import cors from 'cors'
 import express from 'express';
 import { check, validationResult } from 'express-validator';
-import bodyParser from 'body-parser';
 
 import BarsAPI from './api/BarsApi';
 
 const app = express();
 const barsAPI = new BarsAPI();
 
+
+app.use(cors());
 app.use(bodyParser.json());
 
 app.post(
@@ -39,6 +42,7 @@ app.post(
       );
   }
 );
+
 
 app.get('/', (_, res: express.Response) => {
   return res.status(200).json(barsAPI.findMany());
