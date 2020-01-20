@@ -5,6 +5,7 @@ export interface IBar {
   company: string;
   price: number;
   quantity: number;
+  img: string;
   pricesOfBarPacketBox: Array<number>;
   quantitiesOfBarPacketBox: Array<number>;
 
