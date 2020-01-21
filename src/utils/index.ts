@@ -10,10 +10,8 @@
  *
  */
 const calculateNumberOfBars = (bars: number, quantities: Array<number>) => {
-  const [barQuantity, packetQuantity, boxQuantity] = quantities;
-  const packets = Math.floor(bars % boxQuantity) % packetQuantity;
-
-  return Math.floor(packets) / barQuantity;
+  const [, packetQuantity, boxQuantity] = quantities;
+  return (bars % boxQuantity) % packetQuantity;
 };
 
 /**
@@ -29,8 +27,8 @@ const calculateNumberOfBars = (bars: number, quantities: Array<number>) => {
  */
 const calculateNumberOfPackets = (bars: number, quantities: Array<number>) => {
   const [, packetQuantity, boxQuantity] = quantities;
-  const packets = Math.floor(bars % boxQuantity) / packetQuantity;
-  return Math.floor(packets);
+  const packets = bars % boxQuantity;
+  return Math.floor(packets / packetQuantity);
 };
 
 /**
