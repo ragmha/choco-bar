@@ -5,13 +5,11 @@
  * @param quantities - The quantities of bars represented as [bar, packet, box]
  *
  * @example
- * // returns 5
+ * returns 5
  * calculateNumberOfBars(17, [1, 12, 120])
  *
  */
 const calculateNumberOfBars = (bars: number, quantities: Array<number>) => {
-  if (!bars || !quantities) return undefined;
-
   const [barQuantity, packetQuantity, boxQuantity] = quantities;
   const packets = Math.floor(bars % boxQuantity) % packetQuantity;
 
@@ -25,13 +23,11 @@ const calculateNumberOfBars = (bars: number, quantities: Array<number>) => {
  * @param quantities - The quantities of bars represented as [bar, packet, box]
  *
  * @example
- * // returns 1
+ * returns 1
  * calculateNumberOfPackets(17, [1, 12, 120])
  *
  */
 const calculateNumberOfPackets = (bars: number, quantities: Array<number>) => {
-  if (!bars || !quantities) return undefined;
-
   const [, packetQuantity, boxQuantity] = quantities;
   const packets = Math.floor(bars % boxQuantity) / packetQuantity;
   return Math.floor(packets);
@@ -44,13 +40,11 @@ const calculateNumberOfPackets = (bars: number, quantities: Array<number>) => {
  * @param quantities - The quantities of bars represented as [bar, packet, box]
  *
  * @example
- * // returns 1
+ * returns 1
  * calculateNumberOfBoxes(120, [1, 12, 120])
  *
  */
 const calculateNumberOfBoxes = (bars: number, quantities: Array<number>) => {
-  if (!bars || !quantities) return undefined;
-
   const [, , boxQuantity] = quantities;
   return Math.floor(bars / boxQuantity);
 };
@@ -74,10 +68,6 @@ const calculateTotalCost = (
   numOfBoxes: number,
   pricesOfBarPacketBox: Array<number>
 ) => {
-  if (!numOfBars) {
-    return undefined;
-  }
-
   let [priceOfBar, priceOfPacket, priceOfBox] = pricesOfBarPacketBox;
 
   return (
