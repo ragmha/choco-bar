@@ -6,7 +6,10 @@ const request = supertest(app);
 describe('GET /', () => {
   it('responds with json containing a list of all chocolate bars', async done => {
     // Sends a GET request to / endpoint
-    const response = await request.get('/');
+    const response = await request.get('/')
+      .set('Content-type', 'application/json')
+
+
     expect(response.type).toBe('application/json');
     expect(response.status).toBe(200);
     expect(response.body).toHaveLength(1);
@@ -23,7 +26,9 @@ describe('POST /', () => {
     };
 
     // Sends a POST request to / endpoint
-    const response = await request.post('/').send(data);
+    const response = await request.post('/')
+      .set('Content-type', 'application/json')
+      .send(data);
 
     expect(response.type).toBe('application/json');
     expect(response.status).toBe(200);
